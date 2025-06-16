@@ -1,0 +1,253 @@
+{
+  "vendors": {
+    "Raman_Chai_Wala_Connaught_Place": {
+      "profile": {
+        "name": "Raman Chai Wala",
+        "location": "Connaught Place",
+        "location_type": "office_area",
+        "items_sold": [
+          "Chai",
+          "Samosa",
+          "Bread Pakora",
+          "Biscuit"
+        ],
+        "avg_daily_revenue": 650,
+        "peak_hours": [
+          9,
+          12,
+          16,
+          18
+        ]
+      },
+      "sales_history": [
+        {
+          "date": "2025-06-15",
+          "day_of_week": "Sunday",
+          "weather": "sunny",
+          "temperature": 34,
+          "actual_revenue": 420,
+          "items_sold": {
+            "Chai": 85,
+            "Samosa": 25,
+            "Bread Pakora": 15,
+            "Biscuit": 30
+          },
+          "peak_hours_actual": [
+            16,
+            17,
+            18
+          ],
+          "notes": "Lower Sunday footfall as expected"
+        },
+        {
+          "date": "2025-06-14",
+          "day_of_week": "Saturday",
+          "weather": "cloudy",
+          "temperature": 31,
+          "actual_revenue": 580,
+          "items_sold": {
+            "Chai": 95,
+            "Samosa": 35,
+            "Bread Pakora": 22,
+            "Biscuit": 25
+          },
+          "peak_hours_actual": [
+            12,
+            16,
+            18,
+            19
+          ],
+          "notes": "Good Saturday evening crowd"
+        },
+        {
+          "date": "2025-06-13",
+          "day_of_week": "Friday",
+          "weather": "sunny",
+          "temperature": 36,
+          "actual_revenue": 720,
+          "items_sold": {
+            "Chai": 120,
+            "Samosa": 45,
+            "Bread Pakora": 30,
+            "Biscuit": 35
+          },
+          "peak_hours_actual": [
+            9,
+            12,
+            13,
+            16,
+            18
+          ],
+          "notes": "Strong Friday performance, office workers buying extra"
+        }
+      ],
+      "learned_patterns": {
+        "weather_impact": {
+          "sunny": 1.0,
+          "cloudy": 0.92,
+          "rainy": 0.25,
+          "hot": 0.75
+        },
+        "day_patterns": {
+          "Monday": 0.95,
+          "Tuesday": 1.0,
+          "Wednesday": 1.05,
+          "Thursday": 1.1,
+          "Friday": 1.15,
+          "Saturday": 0.8,
+          "Sunday": 0.6
+        },
+        "item_preferences": {
+          "Chai": {
+            "base_demand": 100,
+            "weather_sensitivity": 0.8,
+            "time_peaks": [
+              9,
+              12,
+              16,
+              18
+            ]
+          },
+          "Samosa": {
+            "base_demand": 40,
+            "weather_sensitivity": 1.2,
+            "time_peaks": [
+              12,
+              16,
+              18
+            ]
+          },
+          "Bread Pakora": {
+            "base_demand": 25,
+            "weather_sensitivity": 1.5,
+            "time_peaks": [
+              16,
+              18
+            ]
+          },
+          "Biscuit": {
+            "base_demand": 30,
+            "weather_sensitivity": 0.5,
+            "time_peaks": [
+              9,
+              16
+            ]
+          }
+        }
+      },
+      "performance_metrics": {
+        "avg_daily_revenue": 650,
+        "best_day": "Friday",
+        "worst_day": "Sunday",
+        "weather_sensitivity": 0.7,
+        "seasonal_trends": "Summer: High chai demand despite heat"
+      }
+    },
+    "Sunita_Tiffin_Wali_Lajpat_Nagar": {
+      "profile": {
+        "name": "Sunita Tiffin Wali",
+        "location": "Lajpat Nagar Market",
+        "location_type": "market",
+        "items_sold": [
+          "Chole Bhature",
+          "Rajma Rice",
+          "Dal Chawal",
+          "Lassi"
+        ],
+        "avg_daily_revenue": 950,
+        "peak_hours": [
+          12,
+          13,
+          19,
+          20
+        ]
+      },
+      "sales_history": [
+        {
+          "date": "2025-06-15",
+          "day_of_week": "Sunday",
+          "weather": "sunny",
+          "temperature": 34,
+          "actual_revenue": 1150,
+          "items_sold": {
+            "Chole Bhature": 30,
+            "Rajma Rice": 25,
+            "Dal Chawal": 20,
+            "Lassi": 40
+          },
+          "peak_hours_actual": [
+            12,
+            13,
+            19,
+            20,
+            21
+          ],
+          "notes": "Sunday market day boost, families dining out"
+        }
+      ],
+      "learned_patterns": {
+        "location_advantages": {
+          "market_location": 1.2,
+          "weekend_boost": 1.4,
+          "festival_multiplier": 2.2
+        }
+      }
+    },
+    "Vikram_Snacks_DU_North_Campus": {
+      "profile": {
+        "name": "Vikram Snacks",
+        "location": "DU North Campus Gate",
+        "location_type": "college",
+        "items_sold": [
+          "Maggi",
+          "Sandwich",
+          "Cold Drink",
+          "Chips",
+          "Momos"
+        ],
+        "avg_daily_revenue": 800,
+        "peak_hours": [
+          11,
+          12,
+          16,
+          17,
+          18
+        ]
+      },
+      "sales_history": [],
+      "learned_patterns": {
+        "student_behavior": {
+          "exam_period_drop": 0.4,
+          "semester_break_drop": 0.1,
+          "monsoon_indoor_boost": 1.3,
+          "budget_constraints": "Keep items under ₹25"
+        }
+      }
+    },
+    "Sunita_Tiffin_Wali_Lajpat_Nagar_Market": {
+      "profile": {
+        "name": "Sunita Tiffin Wali",
+        "location": "Lajpat Nagar Market",
+        "location_type": "market",
+        "items_sold": [
+          "Chole Bhature",
+          "Rajma Rice",
+          "Dal Chawal",
+          "Lassi"
+        ],
+        "avg_daily_revenue": 950,
+        "peak_hours": [
+          12,
+          13,
+          19,
+          20
+        ]
+      },
+      "sales_history": [],
+      "learned_patterns": {},
+      "performance_metrics": {}
+    }
+  },
+  "patterns": {},
+  "last_updated": "2025-06-16T22:57:05.976278"
+}

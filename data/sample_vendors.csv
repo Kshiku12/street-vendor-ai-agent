@@ -1,0 +1,26 @@
+vendor_name,location,location_type,items_sold,avg_daily_revenue,peak_hours,operating_days,investment_capacity,years_experience,customer_base_size,seasonal_variation,competition_level
+Raman Chai Wala,Connaught Place,office_area,"Chai,Samosa,Bread Pakora,Biscuit",650,"9,12,16,18",Monday-Saturday,1500,8,200,Medium,High
+Sunita Tiffin Wali,Lajpat Nagar Market,market,"Chole Bhature,Rajma Rice,Dal Chawal,Lassi",950,"12,13,19,20",Monday-Sunday,2500,12,300,High,Medium
+Vikram Snacks,DU North Campus Gate,college,"Maggi,Sandwich,Cold Drink,Chips,Momos",800,"11,12,16,17,18",Monday-Saturday,2000,5,400,Very High,High
+Priya Dosa Corner,Bangalore BTM Layout,residential,"Dosa,Idli,Vada,Sambhar,Coconut Chutney",720,"8,12,19,20",Monday-Sunday,1800,10,250,Low,Medium
+Rohit Fruit Juice,Mumbai Bandra Station,transport_hub,"Fresh Juice,Lassi,Sugarcane Juice,Fruit Salad",600,"7,8,17,18,19",Monday-Sunday,1200,6,150,Medium,Very High
+Meera Paratha Wali,Amritsar Golden Temple,tourist_area,"Aloo Paratha,Paneer Paratha,Curd,Pickle,Butter",1200,"10,11,12,18,19",Monday-Sunday,3000,15,500,Very High,Low
+Ashok Momos,Delhi Karol Bagh,market,"Momos,Chowmein,Manchurian,Fried Rice,Spring Rolls",750,"12,16,17,18,19",Tuesday-Sunday,1800,7,350,Medium,High
+Kamala Idli Wala,Chennai T Nagar,market,"Idli,Dosa,Uttapam,Sambhar,Chutney,Filter Coffee",680,"7,8,12,16,19",Monday-Sunday,1600,20,280,Low,Medium
+Suresh Pav Bhaji,Mumbai Juhu Beach,tourist_area,"Pav Bhaji,Bhel Puri,Sev Puri,Dahi Puri,Kulfi",900,"16,17,18,19,20",Monday-Sunday,2200,9,450,High,Medium
+Geeta Rajasthani Thali,Jaipur Pink City,tourist_area,"Dal Baati,Gatte Ki Sabzi,Ker Sangri,Bajra Roti,Buttermilk",1100,"12,13,19,20",Monday-Sunday,2800,18,200,Very High,Low
+Bablu Egg Roll,Kolkata Park Street,office_area,"Egg Roll,Chicken Roll,Mutton Roll,Veg Roll,Tea",580,"9,12,13,17,18",Monday-Saturday,1400,4,180,Medium,High
+Lakshmi Filter Coffee,Mysore Palace Road,tourist_area,"Filter Coffee,Masala Dosa,Rava Dosa,Coconut Chutney,Sambhar",520,"7,8,10,16,17",Monday-Sunday,1000,25,160,High,Low
+Munna Kulfi Wala,Delhi Chandni Chowk,market,"Kulfi,Falooda,Ice Cream,Rabri,Lassi",450,"15,16,17,18,19",Monday-Sunday,800,12,300,Very High,Medium
+Sita Ram Chole Bhature,Delhi Paharganj,tourist_area,"Chole Bhature,Lassi,Pickle,Onion Salad",780,"11,12,13,18,19",Monday-Sunday,1800,22,350,Medium,High
+Rajesh Dahi Puri,Varanasi Dashashwamedh Ghat,tourist_area,"Dahi Puri,Aloo Tikki,Samosa,Jalebi,Masala Chai",620,"10,11,16,17,18",Monday-Sunday,1300,14,400,High,Medium
+Anita South Indian,Hyderabad Ameerpet,office_area,"Dosa,Idli,Upma,Pesarattu,Coconut Chutney,Sambhar",695,"8,9,12,16,17",Monday-Saturday,1600,11,220,Low,High
+Kiran Sandwich Wala,Pune FC Road,college,"Sandwich,Burger,Pizza,Cold Coffee,Shake",750,"11,12,16,17,18",Monday-Saturday,1700,6,380,High,Very High
+Deepak Misal Pav,Pune Shivaji Nagar,residential,"Misal Pav,Poha,Upma,Sabudana Khichdi,Tea",540,"8,9,12,16,17",Monday-Sunday,1200,8,200,Medium,Medium
+Radha Bhel Puri,Ahmedabad Law Garden,market,"Bhel Puri,Sev Puri,Dahi Puri,Pani Puri,Dhokla",480,"16,17,18,19,20",Monday-Sunday,1000,16,320,High,High
+Mohan Lassi Shop,Jaipur Johari Bazaar,market,"Lassi,Kulfi,Falooda,Badam Milk,Thandai",380,"12,13,16,17,18",Monday-Sunday,900,10,250,Very High,Medium
+Santosh Vada Pav,Mumbai Dadar Station,transport_hub,"Vada Pav,Misal Pav,Poha,Upma,Cutting Chai",420,"7,8,17,18,19",Monday-Saturday,800,5,180,Medium,Very High
+Nirmala Dosa Cart,Bangalore Malleshwaram,residential,"Dosa,Idli,Vada,Kesari Bath,Filter Coffee",560,"8,12,16,19,20",Monday-Sunday,1200,13,190,Low,Medium
+Harish Chaat Corner,Lucknow Aminabad,market,"Aloo Tikki,Papdi Chaat,Dahi Bhalla,Gol Gappe,Kulfi",710,"11,12,16,17,18",Monday-Sunday,1500,17,380,High,High
+Pappu Tea Stall,Patna Gandhi Maidan,office_area,"Tea,Samosa,Kachori,Jalebi,Pakora",340,"9,12,16,17,18",Monday-Saturday,600,9,150,Medium,Medium
+Sushma Rajasthani Food,Udaipur City Palace,tourist_area,"Dal Baati Churma,Gatte Ki Sabzi,Ker Sangri,Bajra Roti,Buttermilk",980,"12,13,19,20",Monday-Sunday,2400,19,180,Very High,Low

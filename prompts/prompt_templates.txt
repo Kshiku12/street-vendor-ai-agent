@@ -1,0 +1,417 @@
+ # Street Vendor Demand Predictor (SVDP) - Dynamic Prompt Templates
+# Author: Kumar Kshitij
+# Context: AI for India's informal economy - localized intelligence
+
+## CORE PRINCIPLES
+- Think in rupees and paise, not generic currency
+- Consider Indian weather patterns (monsoon, summer heat waves)
+- Factor in local festivals and cultural events
+- Account for Indian work schedules (lunch 12-2pm, evening 6-9pm)
+- Understand price sensitivity of different demographics
+- Consider infrastructure challenges (power cuts, water issues)
+
+## DEMAND ANALYSIS PROMPTS
+
+### Weather-Based Analysis
+SUNNY_DAY: |
+  For sunny weather in India:
+  - Cold drinks demand increases 150-200%
+  - Hot food items decrease 15-20% during peak heat (12-4pm)
+  - Evening snacks surge as people venture out after 5pm
+  - Consider ice/cooling arrangements for beverages
+  - Optimal serving: Lassi, Cold Coffee, Fresh Lime Water
+  - Avoid: Heavy curries, very hot items during afternoon
+
+RAINY_DAY: |
+  For rainy weather in India:
+  - Overall footfall drops 60-80%
+  - Hot snacks demand increases 200% (pakoras, samosas, tea)
+  - Customers prefer covered/indoor eating
+  - Delivery becomes crucial if possible
+  - Stock waterproof covers for food
+  - Focus on: Masala Chai, Hot Pakoras, Maggi, Soup
+  - Reduce: Fresh items that spoil quickly, cold beverages
+
+HOT_DAY: |
+  For extreme heat (>38°C) in India:
+  - Shift operations to early morning (6-10am) and evening (6-10pm)
+  - Avoid midday operations (11am-5pm)
+  - Cold items become essential, not optional
+  - Food safety critical - items spoil faster
+  - Customer irritability high - quick service needed
+  - Essential: Chilled drinks, Ice cream, Kulfi, Fresh fruits
+  - Avoid: Meat items, dairy-heavy items, spicy food
+
+CLOUDY_DAY: |
+  For cloudy weather in India:
+  - Moderate impact on footfall (-10 to +5%)
+  - Balanced demand for hot and cold items
+  - Good day for experimenting with new items
+  - Normal operations recommended
+  - Pleasant weather = longer customer dwell time
+
+### Location-Based Analysis
+OFFICE_AREA: |
+  For office areas (CP, Gurgaon, BKC, etc.):
+  - Peak hours: 9-10am (breakfast), 1-2pm (lunch), 4-5pm (tea), 7-8pm (dinner)
+  - Budget range: ₹20-80 per person
+  - Preference: Quick service, clean presentation, consistent quality
+  - Payday effect: 1st-7th of month = 30% higher spending
+  - Friday boost: 15-20% higher sales
+  - Monsoon impact: Indoor food courts perform better
+  - Key items: Sandwiches, South Indian, Chinese, Beverages
+  - Avoid: Very spicy items, items requiring long prep time
+
+COLLEGE_AREA: |
+  For college areas (DU, JNU, local colleges):
+  - Peak hours: 11am-1pm, 4-6pm, 8-10pm
+  - Budget range: ₹10-30 per person (price sensitive)
+  - Preference: Large portions, value for money, trendy items
+  - Exam period: 50% drop in sales
+  - Semester breaks: 80% drop in sales
+  - Weekend patterns: Saturday normal, Sunday 40% drop
+  - Key items: Maggi, Momos, Sandwiches, Cold drinks, Chips
+  - Strategy: Combo offers, student discounts
+
+RESIDENTIAL_AREA: |
+  For residential areas:
+  - Peak hours: 7-9am, 6-9pm (family meal times)
+  - Budget range: ₹15-50 per person
+  - Preference: Home-style food, family portions, fresh items
+  - Weekend boost: 25-40% higher sales
+  - Festival impact: Very high (200-300% increase)
+  - Regular customer base - relationship building crucial
+  - Key items: Dal-Rice, Sabzi-Roti, Curd-based items
+  - Strategy: Family packs, loyalty programs
+
+TRANSPORT_HUB: |
+  For transport hubs (railway stations, bus stands, metro stations):
+  - Peak hours: 6-10am, 5-9pm (commute times)
+  - Budget range: ₹15-40 per person
+  - Preference: Grab-and-go items, packaged well for travel
+  - Speed is crucial - customers in hurry
+  - Weekend patterns: Different due to leisure travel
+  - Weather sensitivity high - rain affects commute
+  - Key items: Packed meals, Sandwiches, Beverages, Snacks
+  - Strategy: Pre-packed items, quick billing
+
+MARKET_AREA: |
+  For market areas (Lajpat Nagar, Sarojini, Karol Bagh):
+  - Peak hours: 11am-2pm, 6-9pm (shopping times)
+  - Budget range: ₹20-60 per person
+  - Preference: Fresh items, good quantity, authentic taste
+  - Weekend surge: 50-80% higher sales
+  - Festival season: Massive boost (300-500%)
+  - Competition high - differentiation needed
+  - Key items: Regional specialties, Fresh juices, Traditional snacks
+  - Strategy: Unique items, premium quality
+
+### Festival & Cultural Event Analysis
+MAJOR_FESTIVALS: |
+  For major festivals (Diwali, Holi, Eid, Dussehra):
+  - Sales boost: 200-400% on festival day
+  - Pre-festival week: 50-100% boost
+  - Post-festival: 20-30% drop for 2-3 days
+  - Special items demand: Sweets, Traditional foods
+  - Extended operating hours profitable
+  - Higher price tolerance
+  - Stock 3x normal inventory
+  - Decoration and festive presentation important
+
+REGIONAL_FESTIVALS: |
+  For regional festivals (Karva Chauth, Teej, local celebrations):
+  - Location-specific impact varies
+  - Research local calendar important
+  - Opportunity for specialized items
+  - Community engagement valuable
+  - 50-150% boost possible in relevant areas
+
+FASTING_DAYS: |
+  For fasting days (Navratri, Ekadashi, etc.):
+  - Vrat-specific items in high demand
+  - Regular items may see 30-50% drop
+  - Opportunity for specialized menu
+  - Higher margins on specialty items
+  - Target devotee communities
+
+### Economic Context Analysis
+SALARY_WEEK: |
+  For salary week (1st-7th of month):
+  - 20-40% boost in spending capacity
+  - Premium items perform better
+  - Larger portion sizes preferred
+  - Good time for new item introduction
+  - Office areas see maximum impact
+
+MONTH_END: |
+  For month-end (25th-30th):
+  - 15-25% drop in spending
+  - Value items perform better
+  - Combo offers more attractive
+  - Basic items maintain demand
+  - Student areas most affected
+
+INFLATION_PERIOD: |
+  During high inflation:
+  - Price sensitivity increases
+  - Portion size becomes critical
+  - Value perception important
+  - Gradual price increases better than sudden
+  - Communication about quality maintenance needed
+
+### Seasonal Trends
+SUMMER_STRATEGY: |
+  For summer months (April-June):
+  - Shift to cooling items and beverages
+  - Extend evening hours, reduce midday
+  - Focus on hydrating options
+  - Invest in cooling equipment
+  - Food safety becomes critical
+  - 40% of annual beverage sales happen now
+
+MONSOON_STRATEGY: |
+  For monsoon months (July-September):
+  - Hot snacks and beverages priority
+  - Covered/sheltered locations crucial
+  - Stock waterproof packaging
+  - Reduce inventory of items that spoil quickly
+  - Delivery options if possible
+  - Health-conscious customers prefer hot, fresh food
+
+WINTER_STRATEGY: |
+  For winter months (December-February):
+  - Hot beverages become bestsellers
+  - Morning sales extend later (people venture out later)
+  - Comfort food demand increases
+  - Festival season overlaps - maximize opportunity
+  - Best season for street food overall
+
+POST_MONSOON: |
+  For post-monsoon (October-November):
+  - Festival season begins
+  - Pleasant weather = higher footfall
+  - Good time for menu expansion
+  - Outdoor dining preference returns
+  - Balance of hot and cold items works well
+
+### Time-Based Optimization
+MORNING_RUSH: |
+  For morning hours (6-10am):
+  - Quick breakfast items essential
+  - Beverages crucial (tea, coffee)
+  - Pre-prepared items work better
+  - Commuter-friendly packaging
+  - Price point: ₹10-30
+
+LUNCH_PEAK: |
+  For lunch hours (12-2pm):
+  - Full meals preferred over snacks
+  - Quick service essential (office workers have limited time)
+  - Balanced nutrition appreciated
+  - Price point: ₹30-80
+  - Pre-cooking and quick assembly model works best
+
+EVENING_SNACKS: |
+  For evening hours (4-7pm):
+  - Snack items outperform meals
+  - Social eating patterns
+  - Experimentation opportunity
+  - Price point: ₹15-50
+  - Fresh preparation preferred
+
+DINNER_TIME: |
+  For dinner hours (7-10pm):
+  - Family-oriented items
+  - Larger portions
+  - Home-style cooking appreciated
+  - Price point: ₹40-100
+  - Quality over speed
+
+### Crisis Management Prompts
+POWER_CUT: |
+  During power cuts:
+  - Switch to items that don't require electricity
+  - Cold beverages become challenging
+  - Manual/gas cooking methods
+  - Opportunity for traditional cooking methods
+  - Customer sympathy usually high
+
+WATER_SHORTAGE: |
+  During water shortage:
+  - Prioritize items requiring minimal water for prep/cleaning
+  - Pre-cleaned vegetables essential
+  - Packaged beverages over fresh ones
+  - Hygiene standards critical despite constraints
+
+SUPPLY_DISRUPTION: |
+  During supply chain issues:
+  - Menu flexibility crucial
+  - Local sourcing alternatives
+  - Customer communication about substitutions
+  - Opportunity to discover new suppliers
+  - Price adjustments may be necessary
+
+COMPETITION_INCREASE: |
+  When new competitors arrive:
+  - Differentiation through unique items
+  - Service quality becomes crucial
+  - Loyalty programs valuable
+  - Price wars generally unprofitable
+  - Focus on existing customer retention
+
+### Customer Psychology Insights
+PRICE_SENSITIVITY_MAPPING: |
+  Understanding price sensitivity by context:
+  - Students: Very high (₹5 difference matters)
+  - Office workers: Medium (₹10-20 difference tolerable)
+  - Families: Medium-high (value perception important)
+  - Commuters: Low (convenience premium acceptable)
+  - Tourists: Very low (experience over price)
+
+QUALITY_EXPECTATIONS: |
+  Quality expectations by location:
+  - Upmarket areas: Very high (presentation, hygiene, taste)
+  - Budget areas: Medium (quantity and taste priority)
+  - Transit points: Basic (safety and speed priority)
+  - Residential: High (home-like quality expected)
+
+### Innovation Opportunities
+TRENDING_ITEMS: |
+  Current trending items to consider:
+  - Fusion foods (Chinese-Indian, Continental-Indian)
+  - Health-conscious options (multigrain, low-oil)
+  - Instagram-worthy presentation
+  - Regional specialties in metro areas
+  - Vegan/organic options in upmarket areas
+
+TECHNOLOGY_INTEGRATION: |
+  Technology opportunities:
+  - Digital payment acceptance (UPI essential)
+  - WhatsApp ordering for regulars
+  - Social media marketing
+  - Inventory tracking apps
+  - Customer feedback systems
+
+### Risk Mitigation
+FOOD_SAFETY: |
+  Food safety in Indian context:
+  - Temperature control crucial in heat
+  - Water quality for preparation
+  - Raw material freshness verification
+  - Personal hygiene despite infrastructure challenges
+  - Customer education about safe choices
+
+REGULATORY_COMPLIANCE: |
+  Regulatory considerations:
+  - Local municipal permissions
+  - Health department guidelines
+  - GST implications for growing business
+  - Location-specific restrictions
+  - Documentation for bank accounts/loans
+
+FINANCIAL_PLANNING: |
+  Financial planning for street vendors:
+  - Daily cash flow management
+  - Seasonal income variations
+  - Emergency fund building
+  - Reinvestment priorities
+  - Simple bookkeeping methods
+
+## DECISION MAKING FRAMEWORK
+
+### Daily Decision Matrix
+DECISION_FACTORS: |
+  Consider these factors for daily decisions:
+  1. Weather forecast (most immediate impact)
+  2. Calendar events (festivals, paydays, exams)
+  3. Historical patterns for similar days
+  4. Current inventory and perishability
+  5. Competition activity
+  6. Personal/family circumstances
+  7. Supply chain status
+  8. Cash flow position
+
+### Confidence Scoring
+CONFIDENCE_LEVELS: |
+  Assign confidence based on:
+  - Historical data availability: 0-40 points
+  - Weather predictability: 0-20 points
+  - Pattern recognition: 0-20 points
+  - External factors certainty: 0-20 points
+  
+  90-100: Very High Confidence
+  70-89: High Confidence
+  50-69: Medium Confidence
+  30-49: Low Confidence
+  Below 30: Very Low Confidence - Conservative approach
+
+### Success Metrics
+KPI_TRACKING: |
+  Key metrics to track:
+  - Daily revenue vs. prediction
+  - Item-wise accuracy
+  - Waste percentage
+  - Customer satisfaction indicators
+  - Peak hour optimization success
+  - Weather impact accuracy
+  - Seasonal trend predictions
+
+## PROMPT RESPONSE TEMPLATES
+
+### Standard Response Format
+PREDICTION_FORMAT: |
+  Format all predictions as:
+  1. Executive Summary (2-3 lines)
+  2. Recommended Items (with quantities)
+  3. Expected Revenue Range
+  4. Peak Operating Hours
+  5. Special Considerations
+  6. Risk Factors
+  7. Confidence Level
+  8. Action Items
+
+### Emergency Protocols
+CRISIS_RESPONSE: |
+  For crisis situations:
+  1. Immediate safety assessment
+  2. Alternative operational modes
+  3. Customer communication strategy
+  4. Financial impact mitigation
+  5. Recovery timeline
+  6. Learning capture for future
+
+### Cultural Sensitivity
+CULTURAL_AWARENESS: |
+  Always consider:
+  - Religious dietary restrictions
+  - Local customs and preferences
+  - Language preferences for communication
+  - Community relationships
+  - Seasonal cultural practices
+  - Regional variations within India
+
+## CONTINUOUS LEARNING PROMPTS
+
+### Pattern Recognition
+PATTERN_ANALYSIS: |
+  Continuously analyze:
+  - Successful prediction patterns
+  - Failed prediction causes
+  - Emerging trends
+  - Customer behavior changes
+  - External factor correlations
+  - Seasonal evolution patterns
+
+### Adaptation Strategies
+LEARNING_INTEGRATION: |
+  Integrate new learnings:
+  - Update historical pattern weights
+  - Refine confidence scoring
+  - Enhance prediction algorithms
+  - Improve risk assessment
+  - Optimize resource allocation
+  - Strengthen customer insights
+
+---
+# End of Prompt Templates
+# Remember: Every prediction should be actionable, culturally aware, and economically realistic for Indian street vendors.
