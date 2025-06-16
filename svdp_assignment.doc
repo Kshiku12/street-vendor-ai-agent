@@ -1,0 +1,151 @@
+# 💾 AI Agent Assignment Submission
+
+## 🗾 SECTION 1: BASIC DETAILS
+
+**Name:** \[Your Name]
+**Agent Title:** Street Vendor Demand Predictor (SVDP)
+**Use Case:** AI agent to help Indian street food vendors forecast daily demand, optimize inventory, and boost profitability.
+
+---
+
+## 🧠 SECTION 2: PROBLEM FRAMING
+
+**1.1 What problem does your AI Agent solve?**
+Many small food vendors struggle to predict how much inventory to prepare each day, leading to either food waste or lost revenue. This AI agent helps forecast demand based on contextual data like weather, weekdays, festivals, and location.
+
+**1.2 Why is this agent useful?**
+It provides local vendors with data-driven insights to plan smarter, reduce waste, and increase profits using real-world factors they already understand intuitively.
+
+**1.3 Who is the target user?**
+Indian street food vendors in offices, markets, colleges, or residential areas.
+
+**1.4 What not to include?**
+No GPS or real-time sensor integration. No complex ML models or mobile app.
+
+---
+
+## 🛡 SECTION 3: 4-LAYER PROMPT DESIGN
+
+### 🔹 3.1 INPUT UNDERSTANDING
+
+**Prompt/Logic:**
+Normalize vendor profile and daily context inputs (weather, day, temperature, is\_festival, is\_payday).
+
+**Responsible for:**
+Transforming raw user context into structured input for AI reasoning.
+
+**Example:**
+Convert “Rainy Saturday, festival day” + "Maggi seller near DU" into quantifiable features.
+
+---
+
+### 🔹 3.2 STATE TRACKER
+
+**Prompt/Logic:**
+Check if vendor exists in memory. If not, initialize profile with base patterns. If yes, load sales history, learned demand, and update memory.
+
+**How it remembers:**
+Via a `memory.json` file storing vendor-specific profiles, sales history, and pattern insights. Updated after every prediction.
+
+---
+
+### 🔹 3.3 TASK PLANNER
+
+**Prompt/Logic:**
+Apply weather multipliers, weekday factors, location modifiers, and learned demand patterns to estimate item quantities and revenue range.
+
+**Steps Taken:**
+
+* Predict item demand
+* Predict revenue range
+* Predict peak hours
+* Detect risks & opportunities (heat, festival, rain)
+
+**Complexity Management:**
+Used modular functions for each sub-task within the agent class. Context-driven logic instead of hardcoded rules.
+
+---
+
+### 🔹 3.4 OUTPUT GENERATOR
+
+**Prompt/Logic:**
+Return human-friendly output with:
+
+* Recommended item counts
+* Expected revenue range
+* Peak selling hours
+* Special notes (e.g., “carry plastic sheets if rain”)
+* Confidence score
+
+**Formatting:**
+Bullet points, simple Hinglish-style notes, rupee signs, fallback defaults.
+
+---
+
+## 🔍 SECTION 4: CHATGPT EXPLORATION LOG
+
+| Attempt # | Prompt / Logic      | What Happened | What You Changed                    | Why                  |
+| --------- | ------------------- | ------------- | ----------------------------------- | -------------------- |
+| 1         | Predict item demand | Too generic   | Added location + weather multiplier | Needed realism       |
+| 2         | Confidence scoring  | Always 1.0    | Based on sales history length       | More dynamic outputs |
+| 3         | Output formatting   | Verbose JSON  | Structured message + confidence bar | Easier for vendors   |
+
+---
+
+## 🧪 SECTION 5: OUTPUT TESTS
+
+**Test 1: Normal Input**
+*Vendor:* Raman Chai Wala (Office area)
+*Context:* Sunny, Tuesday, 32°C
+*Output:*
+
+* Expected Revenue: ₹580 - ₹780
+* Items: Chai 90, Samosa 30, Bread Pakora 22
+* Notes: None
+
+**Test 2: Rainy Festival Day**
+*Vendor:* Sunita Tiffin Wali (Market)
+*Context:* Rainy, Sunday, 28°C, festival
+*Output:*
+
+* Revenue: ₹1000 - ₹1300
+* Items: Double inventory
+* Notes: Stock waterproof packaging
+
+**Test 3: Bad Input (no vendor)**
+*Input:* Unknown vendor ID
+*Output:* Error + suggestion to add vendor profile
+
+---
+
+## 🔄 SECTION 6: REFLECTION
+
+**6.1 Hardest Part:**
+Building confidence scoring that feels fair and intuitive. Also balancing realism without overengineering.
+
+**6.2 Most Enjoyable:**
+Simulating vendors like real humans with memory and quirks.
+
+**6.3 Improvements If Time:**
+Add WhatsApp integration, multi-lingual support, and predictive restocking alerts.
+
+**6.4 Learning about ChatGPT:**
+Prompt layering is powerful. Each part must do one clear job. Clarity matters more than cleverness.
+
+**6.5 When Stuck:**
+Used ChatGPT to test logic ideas like weather scaling and JSON structure.
+
+---
+
+## 🧠 SECTION 7: HACK VALUE
+
+* ✅ Simulated persistent memory via `memory.json`
+* ✅ Dual interface: terminal + web UI
+* ✅ CSV export for logging predictions
+* ✅ Logic includes seasonal trends, regional price sensitivity
+
+---
+
+## ✨ Final Notes:
+
+This project reflects how a simple use-case for a marginalized user base (informal economy vendors) can be meaningfully improved using context-aware AI agents. The journey involved curiosity, logic, debugging, and empathy.

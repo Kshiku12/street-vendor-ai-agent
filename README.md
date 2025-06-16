@@ -7,6 +7,8 @@ An AI-powered agent designed to help small food vendors in India forecast daily 
 ## 👤 Author
 
 **Kumar Kshitij**
+
+
 *Business Growth Analyst – AI Agent Assignment*
 
 ---
@@ -116,5 +118,5 @@ Use the form to select a vendor, fill in weather and day details, and view a pre
 
 ## 📬 Contact
 
-For any queries or testing requests: `kumar.kshitij@proton.me`
+For any queries or testing requests: `kshitij.verma302312@gmail.com`
 
